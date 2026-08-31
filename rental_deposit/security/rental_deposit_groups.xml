@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="group_deposit_manager" model="res.groups">
+        <field name="name">Rental Deposit Manager</field>
+        <field name="privilege_id" ref="sales_team.res_groups_privilege_sales"/>
+    </record>
+
+</odoo>
