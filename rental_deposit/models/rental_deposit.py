@@ -34,6 +34,4 @@ class RentalDeposit(models.Model):
     @api.depends('amount', 'damage_cost')
     def _compute_refundable_amount(self):
         for deposit in self:
-            # BUG (intentional, for demo): the damage cost should be
-            # subtracted from the deposit, not added to it.
-            deposit.refundable_amount = deposit.amount + deposit.damage_cost
+            deposit.refundable_amount = deposit.amount - deposit.damage_cost
